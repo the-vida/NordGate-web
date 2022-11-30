@@ -48,31 +48,32 @@
                     <h1 class="leader"><strong>NordGate</strong></h1>
                     <h3>Jak se připojit?</h3>
                     <br />
+
+                    <p hidden id="myInput">mc.nordgate.site:17071</p>
+                    <p hidden id="myInput2">mc.nordgate.site</p>
+                    <p hidden id="myInput3">17071</p>
+
                     <div class="col-md-4">
 						<div class="icon">
 							<img src="assets/img/grass.png" />
 						</div>
                         <h2>Java hráči (počítač)</h2>
-                        <p>Po vstoupení do Minecraft menu klikněte na <strong>Multiplayer</strong> a dejte <strong>add server</strong> jako  <strong>IP</strong> napište <button onclick="myFunction()">mc.nordgate.site:17071</button>. Potom <strong>uložte</strong> a dejte jen <strong>play</strong> pro vstoupení do hry. 
-                            <br /><br />
-                        </p>
+                        <p>Po vstoupení do Minecraft menu klikněte na <strong>Multiplayer</strong> a dejte <strong>add server</strong> jako  <strong>IP</strong> napište <button class="k2-copy-button" id="k2button">mc.nordgate.site:17071</button>. Potom <strong>uložte</strong> a dejte jen <strong>play</strong> pro vstoupení do hry. </p>
                     </div>
                     <div class="col-md-4">
 						<div class="icon">
 							<img src="assets/img/crafting-table.png " />
 						</div>
                         <h2>Bedrock hráči (mobil)</h2>
-                        <p>Po vstoupení do hry dejte <strong>hrát</strong>, potom <strong>servery</strong> a dejte <strong>přidat server</strong>. Server pojmenujte např. <u>nordgate</u>. Do <strong>adresa servru</strong> napište <button onclick="myFunction()">mc.nordgate.site</button> a do <strong>portu</strong> <button onclick="myFunction()">17071</button>. Dejte <strong>uložit</strong> a můžete se připojit kliknutím na server.
-                            <br /><br />
-                        </p>
+                        <p>Po vstoupení do hry dejte <strong>hrát</strong>, potom <strong>servery</strong> a dejte <strong>přidat server</strong>. Server pojmenujte např. <u>nordgate</u>. Do <strong>adresa servru</strong> napište <button class="k2-copy-button" id="k2button2">mc.nordgate.site</button> a do <strong>portu</strong> <button class="k2-copy-button" id="k2button3">17071</button>. Dejte <strong>uložit</strong> a můžete se připojit kliknutím na server.</p>
                     </div>
                     <div class="col-md-4">
 						<div class="icon">
 							<img src="assets/img/planet.png" />
 						</div>
                         <h2>Podporované verze Minecraftu</h2>
-                        <p><strong>Java</strong>: <u>1.8</u> až <u>1.19.2</u></p>
-                        <p><strong>Bedrock</strong>: <u>1.19.40</u> až <u>1.19.42</u></p>
+                        <p><strong>Java</strong>: <button>1.8</button></u> až <button>1.19.2</button></u></p>
+                        <p><strong>Bedrock</strong>: <button>1.19.40</button> až <button>1.19.42</button></p>
                         <h4>Pro lepší zážitek ze hry, doporučujeme použivat nejnovějši verze, alespoň pro Javu nad verzi 1.16</h4>
                             <br /><br />
                         </p>
@@ -80,6 +81,49 @@
                 </div>
             </div>
 			<!-- /.container -->
+
+            <script>
+                function copyFunction() {
+                const copyText = document.getElementById("myInput").textContent;
+                const textArea = document.createElement('textarea');
+                textArea.textContent = copyText;
+                document.body.append(textArea);
+                textArea.select();
+                document.execCommand("copy");
+                k2button.innerText = "IP byla  zkopírována!";
+                  textArea.remove();
+              }
+              document.getElementById('k2button').addEventListener('click', copyFunction);
+                </script>
+
+<script>
+    function copyFunction() {
+    const copyText = document.getElementById("myInput2").textContent;
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText;
+    document.body.append(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    k2button2.innerText = "IP byla  zkopírována!";
+      textArea.remove();
+  }
+  document.getElementById('k2button2').addEventListener('click', copyFunction);
+    </script>
+
+<script>
+    function copyFunction() {
+    const copyText = document.getElementById("myInput3").textContent;
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText;
+    document.body.append(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    k2button3.innerText = "Port byl  zkopírován!"
+    }
+  
+  document.getElementById('k2button3').addEventListener('click', copyFunction);
+    </script>
+
         <div class="container">
             <hr>
             <footer>
