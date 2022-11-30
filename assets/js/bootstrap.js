@@ -3,6 +3,10 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+if(/https/.test(window.location.protocol)){
+  window.location.href = window.location.href.replace('http:', 'https:');    
+}
+
 
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
@@ -23,9 +27,6 @@ if (typeof jQuery === 'undefined') {
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-if(/https/.test(window.location.protocol)){
-    window.location.href = window.location.href.replace('http:', 'https:');    
-}
 
 +function ($) {
   'use strict';
