@@ -69,17 +69,7 @@ body{
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-.btn-glow {
-  -webkit-animation-name: bluePulse;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  text-shadow: none;
-}
-@-webkit-keyframes bluePulse {
-  from { background-color: #1CC7E3; -webkit-box-shadow: 0 0 9px #1CC7E3; }
-  50% { background-color: #1FD9F2; -webkit-box-shadow: 0 0 18px #1FD9F2; }
-  to { background-color: #1CC7E3; -webkit-box-shadow: 0 0 9px #1CC7E3; }
-}
+
 .icon img{
   height: 100px;
   width: 100px;
